@@ -17,7 +17,9 @@ public class AdminJobs {
 
     private String Category_Name;
     private String StreamName;
-
+    public int minSalary;
+    public int maxSalary;
+    public String deadlineDate;
     private String job_description;
 
     public AdminJobs() {
@@ -26,6 +28,30 @@ public class AdminJobs {
 
     public Long getId() {
         return id;
+    }
+
+    public int getMinSalary() {
+        return minSalary;
+    }
+
+    public void setMinSalary(int minSalary) {
+        this.minSalary = minSalary;
+    }
+
+    public int getMaxSalary() {
+        return maxSalary;
+    }
+
+    public void setMaxSalary(int maxSalary) {
+        this.maxSalary = maxSalary;
+    }
+
+    public String getDeadlineDate() {
+        return deadlineDate;
+    }
+
+    public void setDeadlineDate(String deadlineDate) {
+        this.deadlineDate = deadlineDate;
     }
 
     public void setId(Long id) {

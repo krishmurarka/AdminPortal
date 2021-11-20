@@ -46,6 +46,9 @@ public class AdminJobImplementation implements AdminJobService {
         jobs.setCategory_Name(adminJobs.getCategory_Name());
         jobs.setStreamName(adminJobs.getStreamName());
         jobs.setJob_description(adminJobs.getJob_description());
+        jobs.setMinSalary(adminJobs.getMinSalary());
+        jobs.setMaxSalary(adminJobs.getMaxSalary());
+        jobs.setDeadlineDate(adminJobs.getDeadlineDate());
         this.adminJobRepository.save(jobs);
 
     }

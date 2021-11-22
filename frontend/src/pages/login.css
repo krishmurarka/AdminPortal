@@ -1,0 +1,10 @@
+#rememberme:checked{
+    background-color: blue !important;
+    color: red !important;
+}
+#eael-login-submit{
+    background-color: blue !important;
+    color: white !important;
+    padding: 10px;
+    border-radius: 5px;
+}

@@ -46,6 +46,38 @@ public class UserImplementation implements UserService {
         this.userRepository.save(check);
     }
 
+    @Override
+    public void updateResetPasswordToken(String token, String email) {
+        System.out.println("Check");
+        userRepository.updateUser(email, token);
+    }
+    // 3 - below methods for reset Password Token
+
+//    @Override
+//    public void updateResetPasswordToken(String token, String email) {
+//
+//        User user = userRepository.findByEmail(email);
+//        if (user != null) {
+//            user.setResetPasswordToken(token);
+//
+//            userRepository.save(user);
+//        } else {
+//            System.out.println("Could not find any user with this email" + email);
+//        }
+//    }
+
+    @Override
+    public User get(String reset_password_token) {
+        return userRepository.findByResetPasswordToken(reset_password_token);
+    }
+
+    @Override
+    public void updatePassword(User user, String newPassword) {
+        user.setPassword(newPassword);
+
+        user.setResetPasswordToken(null);
+        userRepository.save(user);
+    }
 //    @Override
 //    public void updateUser(String username) {
 //

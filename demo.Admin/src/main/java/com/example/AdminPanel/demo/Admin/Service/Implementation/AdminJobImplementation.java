@@ -38,12 +38,12 @@ public class AdminJobImplementation implements AdminJobService {
         if (jobs == null) {
             System.out.println("No such user present");
         }
+        jobs.setCompany_Name(adminJobs.getCompany_Name());
         jobs.setCategory_Name(adminJobs.getCategory_Name());
         jobs.setJob_Title(adminJobs.getJob_Title());
         jobs.setUrl(adminJobs.getUrl());
         jobs.setCompany_Logo(adminJobs.getCompany_Logo());
         jobs.setJob_Location(adminJobs.getJob_Location());
-        jobs.setCategory_Name(adminJobs.getCategory_Name());
         jobs.setStreamName(adminJobs.getStreamName());
         jobs.setJob_description(adminJobs.getJob_description());
         jobs.setMinSalary(adminJobs.getMinSalary());

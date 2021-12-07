@@ -21,6 +21,16 @@ public class User implements UserDetails {
     private String Name;
 
     private String email;
+    public String resetPasswordToken;
+
+    public String getResetPasswordToken() {
+        return resetPasswordToken;
+    }
+
+    public void setResetPasswordToken(String resetPasswordToken) {
+        this.resetPasswordToken = resetPasswordToken;
+    }
+
     private boolean enabled = true;
 
     public User() {
